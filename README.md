@@ -14,7 +14,7 @@ The Figure below shows the main architecture of the tool with the components and
 
 In this section we are going to explore a running example based on three metamodels, i.e. __ShapeMM1__, __ShapeMM2__ and __ShapeMM3__ part of a project where three transformations are possible, i.e. __T1, T2, T3__, as depicted in Figure below.
 
-![Running example](figures/ex-new2.png)
+![Running example](figures/ex2-new.png)
 <em>Semantic Importance-based Information Loss.</em>
 
 ## Execution on Real Examples
