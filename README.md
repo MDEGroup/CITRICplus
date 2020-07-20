@@ -29,7 +29,7 @@ The result is then reported in terms of IL if the approach is able to identify t
 | Shapes       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 2.13 <hr/> **1.87**  |
 | Grafcet2PNML | Grafcet --> PetriNet --> PNML (bis) <hr/> Grafcet --> PetriNet --> PNML | Grafcet --> PetriNet --> PNML  | 1.23 <hr/> **0.63** |
 | Table2XML    | Table --> XML <hr/> Table --> XML  | Table --> XML  | 7.6 <hr/> **3.1**  |
-| Ant2XML      | ANT --> Maven --> XML <hr/> ANT --> Maven (bis) --> XML |   | **0** <hr/> 5.92  |
+| Ant2XML      | ANT --> Maven --> XML <hr/> ANT --> Maven --> XML (bis) |   | **0** <hr/> 5.92  |
 | RSS2ATOM     | <hr/>  |   | 4.12 <hr/> **2.57**  |
 
 <em>Result of the execution on different projects.</em>
