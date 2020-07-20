@@ -1,6 +1,6 @@
 # Shapes
 
-## Chains
+## Chains description
    - Chain Ch1
       - Transformation T1 = ShapeMM1 --> ShapeMM2
       - Transformation T3 = ShapeMM2 --> ShapeMM3
@@ -20,7 +20,7 @@ The given input model has two instances of the ShapeMM1!Circle, and two instance
 For sake of this example we have assigned to the ShapeMM1!Circle metaclass a ```weight = 2```, while the ShapeMM1!Square has a ```weight = 1```. We have also assigned a ```weight = 1``` to the _name_ structural feature.
 Concerning the ShapeMM2, we have decided to assign a ```weight = 1``` for both the metaclasses as well as to the structural feature _name_.
 
-### Applying chain
+## Chaining results
 
 | Projects  |  Available chains |  Selected |  IL |
 |  :---:       |:---:|:---:|:---:|
