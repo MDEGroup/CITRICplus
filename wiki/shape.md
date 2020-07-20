@@ -12,7 +12,7 @@
 
 The given input model ([shape1.xmi]()) has two instances of the ShapeMM1!Circle, and two instances of ShapeMM1!Square. Both the instances have a StructuralFeature name.
 For sake of this example we have assigned to the ShapeMM1!Circle metaclass a ```weight = 2```, while the ShapeMM1!Square has a ```weight = 1```. We have also assigned a ```weight = 1``` to the _name_ structural feature.
-Concerning the ShapeMM2, we have decided to assign a ```weight = 1``` for both the metaclasses as well as to the structural feature _name_.
+Concerning the ShapeMM2, we have decided to assign a ```weight = 1``` to both the metaclasses as well as to the structural feature _name_.
 
 ## Chaining results
 
