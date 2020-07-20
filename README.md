@@ -31,6 +31,7 @@ The result is then reported in terms of IL if the approach is able to identify t
 | Table2XML    | <hr/>  |   | 7.6 <hr/> **3.1**  |
 | Ant2XML      | <hr/>  |   | **0** <hr/> 5.92  |
 | RSS2ATOM     | <hr/>  |   | 4.12 <hr/> **2.57**  |
+
 <em>Result of the execution on different projects.</em>
 
 ### Getting started with CITRIC+
