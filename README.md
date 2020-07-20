@@ -9,7 +9,7 @@ The Figure below shows the main architecture of the tool with the components and
 
 ![Proposed Tool](figures/approach.png)
  <em>Proposed tool.</em>
-
+ 
 ## Running example
 
 In this section we are going to explore a running example based on three metamodels, i.e. __ShapeMM1__, __ShapeMM2__ and __ShapeMM3__ part of a project where three transformations are possible, i.e. __T1, T2, T3__, as depicted in Figure below.
@@ -26,17 +26,27 @@ The result is then reported in terms of IL if the approach is able to identify t
 <a id="table1"></a>
 | Projects  |  Available chains |  Selected |  IL |
 |  :---:       |:---:|:---:|:---:|
-| Shapes       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 2.13 <hr/> **1.87**  |
-| Grafcet2PNML | Grafcet --> PetriNet --> PNML (bis) <hr/> Grafcet --> PetriNet --> PNML | Grafcet --> PetriNet --> PNML  | 1.23 <hr/> **0.63** |
-| Table2XML    | Table --> XML <hr/> Table --> XML  | Table --> XML  | 7.6 <hr/> **3.1**  |
-| Ant2XML      | ANT --> Maven --> XML <hr/> ANT --> Maven --> XML (bis) |   | **0** <hr/> 5.92  |
-| RSS2ATOM     | <hr/>  |   | 4.12 <hr/> **2.57**  |
+| [Shapes](wiki/shape.md)       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 2.13 <hr/> **1.87**  |
+| [Grafcet2PNML](wiki/grafcet.md) | Grafcet2PetriNet --> PetriNet2PNML v1.0 <hr/> Grafcet2PetriNet --> PetriNet2PNML v1.87 | Grafcet --> PetriNet --> PNML  | 1.23 <hr/> **0.63** |
+| [Table2XML](wiki/table.md)    | Table2HTML --> HTML2XML v1.0 <hr/> Table2HTML --> HTML2XML v1.6  | Table2HTML --> HTML2XML (bis)  | 7.6 <hr/> **3.1**  |
+| [Ant2XML](wiki/ant.xml)      | ANT2Maven --> Maven2XML v1.0 <hr/> ANT2Maven --> Maven2XML v2  | ANT2Maven --> Maven2XML  | **0** <hr/> 5.92  |
+| [RSS2ATOM](wiki/rss.md)     | RSS2XML --> XML2ATOM v.6 <hr/> RSS2XML --> XML2ATOM v0.9 |   | 4.12 <hr/> **2.57**  |
 
 <em>Result of the execution on different projects.</em>
 
 ### Getting started with CITRIC+
 
+CITRIC+ is provided as a maven project, which can be run within ECLIPSE IDE. 
 
+  1. clone this repository and then point to the root folder 
+  ``` git clone https://github.com/MDEGroup/CITRICplus && cd CITRICplus```
+  2. install maven dependencies
+  ```mvn install```
+  3. import the source code in a new ECLIPSE project
+  4. use the provided launch files to execute different case studies as you prefer.
+  
+CITRIC+ computes transformation chaining at runtime, without generetating middle models. For example, to compute the best chain between T1 --> T3, and T2 --> T3 CITRIC+ does not build the model conforming to the ShapeMM2 metamodel.
+Result of our case studies are listed in [Table 1](#table1).
 
 ### References
 
