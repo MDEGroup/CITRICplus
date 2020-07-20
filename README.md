@@ -26,7 +26,7 @@ The result is then reported in terms of IL if the approach is able to identify t
 <a id="table1"></a>
 | Projects  |  Available chains |  Selected |  IL |
 |  :---:       |:---:|:---:|:---:|
-| Shapes       | T1 --> T2 (bis) --> T3 <hr/> T1 --> T2 --> T3  | T1 --> T2 --> T3  | 2.13 <hr/> **1.87**  |
+| Shapes       | T1 --> T3 <hr/> T2 --> T3  | T1 --> T2 --> T3  | 2.13 <hr/> **1.87**  |
 | Grafcet2PNML | Grafcet --> PetriNet --> PNML (bis) <hr/> Grafcet --> PetriNet --> PNML | Grafcet --> PetriNet --> PNML  | 1.23 <hr/> **0.63** |
 | Table2XML    | <hr/>  |   | 7.6 <hr/> **3.1**  |
 | Ant2XML      | <hr/>  |   | **0** <hr/> 5.92  |
