@@ -1,12 +1,12 @@
 # Shapes
 
 ## Chains description
-   - Chain Ch1
-      - Transformation T1 = ShapeMM1 --> ShapeMM2: T1 maps the ShapeMM1!Circle metaclass with the Shape2MM!BlueCircle. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
-      - Transformation T3 = ShapeMM2 --> ShapeMM3: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
-   - Chain Ch2
-      - Transformation T2 = ShapeMM1 --> ShapeMM2: T2 maps the ShapeMM1!Square metaclass with the Shape2MM!Diamond. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
-      - Transformation T3 = ShapeMM2 --> ShapeMM3: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
+   - Chain **Ch1**
+      - Transformation _T1 = ShapeMM1 --> ShapeMM2_: T1 maps the ShapeMM1!Circle metaclass with the Shape2MM!BlueCircle. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
+      - Transformation _T3 = ShapeMM2 --> ShapeMM3_: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
+   - Chain **Ch2**
+      - Transformation _T2 = ShapeMM1 --> ShapeMM2_: T2 maps the ShapeMM1!Square metaclass with the Shape2MM!Diamond. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
+      - Transformation _T3 = ShapeMM2 --> ShapeMM3_: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
 
 ## Input Model
 
