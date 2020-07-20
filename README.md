@@ -5,15 +5,17 @@ In this work we extend the definition of information loss with the notion of \em
 
 In this section we will describe the approach implemented by the tool for selecting optimal transformation chains based on information loss and semantic importance. 
 CITRIC works as an integration of the MDEForge <cite>[[2]](#ref2)</cite>, but it can work also as standalone plugin. Indeed to run the tool in a standalone environment, as we will demonstrate later, are only related to the remote connection with the repository, used to retrieve the required models and transformations. 
-The Figure below shows the main architecture of the tool with the components and the different kinds of artefacts given as input or generated in output. The user request is composed of an input model and a required output metamodel. The input model is given to a dedicated component, which is able to retrieve the corresponding metamodel, that the modeler can edit in order to express the \emph{semantic importance} of the concepts and relationships. 
+The Figure below shows the main architecture of the tool with the components and the different kinds of artefacts given as input or generated in output. The user request is composed of an input model and a required output metamodel. The input model is given to a dedicated component, which is able to retrieve the corresponding metamodel, that the modeler can edit in order to express the _semantic importance_ of the concepts and relationships. 
 
-TODO add Fig 7
+![Proposed Tool](figures/approach.png)
+ <em>Proposed tool.</em>
 
 ## Running example
 
 In this section we are going to explore a running example based on three metamodels, i.e. __ShapeMM1__, __ShapeMM2__ and __ShapeMM3__ part of a project where three transformations are possible, i.e. __T1, T2, T3__, as depicted in Figure below.
 
-TODO add Fig3
+![Running example](figures/ex-new2.png)
+<em>Semantic Importance-based Information Loss.</em>
 
 ## Execution on Real Examples
 
@@ -29,6 +31,7 @@ The result is then reported in terms of IL if the approach is able to identify t
 | Table2XML    |   |   | 7.6 <br/> **3.1**  |
 | Ant2XML      |   |   | **0** <br/> 5.92  |
 | RSS2ATOM     |   |   | 4.12 <br/> **2.57**  |
+<em>Result of the execution on different projects.</em>
 
 ### Getting started with CITRIC+
 
