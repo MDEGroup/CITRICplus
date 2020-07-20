@@ -15,21 +15,24 @@ In this section we are going to explore a running example based on three metamod
 
 TODO add Fig3
 
-
-
 ## Execution on Real Examples
 
 We show the results of executing the tool first with the project shown as running example, and then with other 4 projects, downloaded from the ATL Zoo.
-[Table]() reports the name of the project, the available chains if more than one available and the selected chain by the approach. Also the available transformations are reported with \textsc{$T_i$} in the table and the complete name can be found on the github repository. The annotations in the metamodel elements are reported randomly in order to check the effectiveness of the approach.
+[Table](#table1) reports the name of the project, the available chains if more than one available and the selected chain by the approach. Also the available transformations can be found on this github repository (TODO mettere link alla folder). The annotations in the metamodel elements are reported randomly in order to check the effectiveness of the approach.
 The result is then reported in terms of IL if the approach is able to identify the best chain wrt. the input model and the semantically annotated metamodel on the input model.
 
 <a id="table1"></a>
-|   |   |   |   |   |
-|---|---|---|---|---|
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
-|   |   |   |   |   |
+| Projects  |  Available chains |  Selected |  IL |
+|  :---:       |:---:|:---:|:---:|
+| Shapes       | T1 --> T3 <hr/> T2 --> T3  |   |   |
+| Grafcet2PNML | Grafcet --> PetriNet --> PNML (bis) <hr/> Grafcet --> PetriNet --> PNML | Grafcet --> PetriNet --> PNML  | 1.23 <hr/> **0.63** |
+| Table2XML    |   |   | 7.6 <br/> **3.1**  |
+| Ant2XML      |   |   | **0** <br/> 5.92  |
+| RSS2ATOM     |   |   | 4.12 <br/> **2.57**  |
+
+### Getting started with CITRIC+
+
+
 
 ### References
 
