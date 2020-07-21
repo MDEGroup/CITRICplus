@@ -26,11 +26,11 @@ The result is then reported in terms of IL if the approach is able to identify t
 <a id="table1"></a>
 | Projects  |  Available chains |  Selected |  IL |
 |  :---:       |:---:|:---:|:---:|
-| [Shapes](wiki/shape.md)       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 2.13 <hr/> **1.87**  |
-| [Grafcet2PNML](wiki/grafcet.md) | Grafcet2PetriNet --> PetriNet2PNML v1.0 <hr/> Grafcet2PetriNet --> PetriNet2PNML v1.87 | Grafcet --> PetriNet --> PNML  | 1.23 <hr/> **0.63** |
-| [Table2XML](wiki/table.md)    | Table2HTML --> HTML2XML v1.0 <hr/> Table2HTML --> HTML2XML v1.6  | Table2HTML --> HTML2XML (bis)  | 7.6 <hr/> **3.1**  |
-| [Ant2XML](wiki/ant.xml)      | ANT2Maven --> Maven2XML v1.0 <hr/> ANT2Maven --> Maven2XML v2  | ANT2Maven --> Maven2XML  | **0** <hr/> 5.92  |
-| [RSS2ATOM](wiki/rss.md)     | RSS2XML --> XML2ATOM v.6 <hr/> RSS2XML --> XML2ATOM v0.9 |   | 4.12 <hr/> **2.57**  |
+| [Shapes](wiki/shape.md)       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 1.73 <hr/> **1.07**  |
+| [Grafcet2PNML](wiki/grafcet.md) | Grafcet2PetriNet --> PetriNet2PNML v1.0 <hr/> Grafcet2PetriNet --> PetriNet2PNML v1.87 | Grafcet --> PetriNet --> PNML  | 2.40 <hr/> **0.40** |
+| [Table2XML](wiki/table.md)    | Table2HTML --> HTML2XML v1.0 <hr/> Table2HTML --> HTML2XML v1.6  | Table2HTML --> HTML2XML (bis)  | **0** <hr/> 456  |
+| [Ant2XML](wiki/ant.xml)      | ANT2Maven --> Maven2XML v1.0 <hr/> ANT2Maven --> Maven2XML v1.01  | ANT2Maven --> Maven2XML  | **0** <hr/> 62.59  |
+| [PathExp2XML](wiki/path.md)     | PathExp2PetriNet -> PetriNet2XML v.6 <hr/> PathExp2PetriNet -> PetriNet2XML v0.9 |   | 3.0 <hr/> **0**  |
 
 <em>Result of the execution on different projects.</em>
 
