@@ -18,6 +18,6 @@ Concerning the ShapeMM2, we have decided to assign a ```weight = 1``` to both th
 
 | Projects  |  Available chains |  Selected |  IL |
 |  :---:       |:---:|:---:|:---:|
-| [Shapes](wiki/shape.md)       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 2.13 <hr/> **1.87**  |
+| [Shapes](wiki/shape.md)       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 1.73 <hr/> **1.07**  |
 
 <em>Results of CITRIC+ over Ch1 and Ch2 chains.</em>
