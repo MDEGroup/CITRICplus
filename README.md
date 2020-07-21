@@ -1,7 +1,7 @@
 # CITRIC+
 
 The presented tool offered a first level of customization on the meta-metamodel level, specifying the weight of the information loss wrt. the concept of a lost instance or a lost value set in a structural feature. This means that for every instance lost in the transformation process, the tool will consider the same weight. 
-In this work we extend the definition of information loss with the notion of \emph{semantic importance} to be expressed on the concepts in metamodels involved in the transformation. Moreover the tool CITRIC presented in <cite>[[1]](#ref1)</cite> has been extended with a semantic reasoner component that will automatically select the solution with minor information loss, also considering the semantic importance. We enhanced CITRIC with a "+" entitoling it CITRIC+.
+In this work we extend the definition of information loss with the notion of \emph{semantic importance} to be expressed on the concepts in metamodels involved in the transformation. Moreover the tool CITRIC presented in <cite>[[1]](#ref1)</cite> has been extended with a semantic reasoner component that will automatically select the solution with minor information loss, also considering the semantic importance. We enhanced CITRIC with a "+" entitling it CITRIC+.
 
 In this section we will describe the approach implemented by the tool for selecting optimal transformation chains based on information loss and semantic importance. 
 CITRIC works as an integration of the MDEForge <cite>[[2]](#ref2)</cite>, but it can work also as standalone plugin. Indeed to run the tool in a standalone environment, as we will demonstrate later, are only related to the remote connection with the repository, used to retrieve the required models and transformations. 
