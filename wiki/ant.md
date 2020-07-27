@@ -5,14 +5,14 @@ Ant is an open source build tool (a tool dedicated to the assembly of the differ
 Due to the complexity of the following transformation, we refer to the ATL codes directly, to better understand mappings among metaclasses and structural features.
 
  - Chain **Ch1**
-   - Transformation [Ant2HTML v1.0](../tool/case_study/Ant2Maven2XML/v1.0/Ant2Maven.atl): please, take a look at this file for mappings among metaclasses and structural feature of Ant and Maven metamodels.
+   - Transformation [Ant2Maven v1.0](../tool/case_study/Ant2Maven2XML/v1.0/Ant2Maven.atl): please, take a look at this file for mappings among metaclasses and structural feature of Ant and Maven metamodels.
 
    - Transformation [Maven2XML v1.0](../tool/case_study/Ant2Meven2XML/v1.0/Maven2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of Maven and XML metamodels.
 
   - Chain **Ch2**
     - Transformation [Ant2Meven v1.01](../tool/case_study/Ant2Maven2XML/v1.01/Ant2Maven.atl): please, take a look at this file for mappings among metaclasses and structural features of Ant and Maven metamodels.
     
-    - Transformation [Maven2XML v1.6](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of Maven and XML metamodels.
+    - Transformation [Maven2XML v1.01](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of Maven and XML metamodels.
 
 
 ## Input Model
