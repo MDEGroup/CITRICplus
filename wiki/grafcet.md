@@ -57,13 +57,13 @@
         - Grafcet!Grafecet.location --> PetriNet!PetriNet.location
 	- Grafcet!Grafecet.name --> PetriNet!PetriNet.name
 	- Grafcet!Grafecet.elements --> PetriNet!PetriNet.elements
-	- Grafcet!Grafecet.connections --> PetriNet!PetriNet.arcs
+        - Grafcet!Grafecet.connections --> PetriNet!PetriNet.arcs
       - Grafcet!Step --> PetriNet!Place
-- Grafcet!Step.location --> PetriNet!Place.location
-- Grafcet!Step.name --> PetriNet!Place.name
-- Grafcet!Step.grafcet --> PetriNet!Place.net
-- Grafcet!Step.incomingConnections --> PetriNet!Place.incomingConnections
-- Grafcet!Step.outgoingConnections --> PetriNet!Place.outgoingConnections
+        - Grafcet!Step.location --> PetriNet!Place.location
+	- Grafcet!Step.name --> PetriNet!Place.name
+	- Grafcet!Step.grafcet --> PetriNet!Place.net
+	- Grafcet!Step.incomingConnections --> PetriNet!Place.incomingConnections
+	- Grafcet!Step.outgoingConnections --> PetriNet!Place.outgoingConnections
       - Grafcet!Transition --> PetriNet!Transition
         - Grafcet!Transition.location --> PetriNet!Transition.location
 	- Grafcet!Transition.name --> PetriNet!Transition.name
@@ -82,21 +82,21 @@
 	- Grafcet!TransitionToStep.grafcet --> PetriNet!Step.net
 	- Grafcet!TransitionToStep."from" --> PetriNet!Step."from" 
 	- Grafcet!TransitionToStep."to" --> PetriNet!Step."to"
-  - Transformation [PetriNet2PNML v1.87](../tool/case_study/Grafcet2PetriNet2PNML/v1.87/PetriNet2PNML.atl): _Grafcet2PetriNet_ maps metaclasses and StructuralFeature as follows:
-    - PetriNet!PetriNet --> PNML!PNMLDocument
-      - PetriNet!PetriNet.location --> PNML!PNMLDocument.location
-      - PetriNet!PetriNet.uri --> PNML!PNMLDocument.xmlns
-      - PetriNet!PetriNet.net --> PNML!PNMLDocument.nets
-    - PetriNet!Place --> PNML!Place
-      - PetriNet!Place.name --> PNML!Place.name
-      - PetriNet!Place.name --> PNML!Place.id
-      - PetriNet!Place.location --> PNML!Place.location
-    - PetriNet!Arc --> PNML!Arc
-      - PetriNet!Arc.name <- PNML!Arc.name,
-      - PetriNet!Arc.location --> PNML!Arc.location
-      - PetriNet!Arc.name --> PNML!Arc.id
-      - PetriNet!Arc."from" --> PNML!Arc.source
-      - PetriNet!Arc."to" --> PNML!Arc.target
+    - Transformation [PetriNet2PNML v1.87](../tool/case_study/Grafcet2PetriNet2PNML/v1.87/PetriNet2PNML.atl): _Grafcet2PetriNet_ maps metaclasses and StructuralFeature as follows:
+      - PetriNet!PetriNet --> PNML!PNMLDocument
+        - PetriNet!PetriNet.location --> PNML!PNMLDocument.location
+        - PetriNet!PetriNet.uri --> PNML!PNMLDocument.xmlns
+        - PetriNet!PetriNet.net --> PNML!PNMLDocument.nets
+      - PetriNet!Place --> PNML!Place
+        - PetriNet!Place.name --> PNML!Place.name
+	- PetriNet!Place.name --> PNML!Place.id
+	- PetriNet!Place.location --> PNML!Place.location
+      - PetriNet!Arc --> PNML!Arc
+        - PetriNet!Arc.name <- PNML!Arc.name
+	- PetriNet!Arc.location --> PNML!Arc.location
+	- PetriNet!Arc.name --> PNML!Arc.id
+	- PetriNet!Arc."from" --> PNML!Arc.source
+	- PetriNet!Arc."to" --> PNML!Arc.target
 
 ## Input Model
 
