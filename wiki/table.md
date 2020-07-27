@@ -16,7 +16,7 @@
 		- "<left|center|rigth>" --> HTML!TD.align
     - Transformation [HTML2XML v1.0](../tool/case_study/Table2HTML2XML/v1.0/HTML2XML.atl): _HTML2XML_ maps metaclasses and StructuralFeature as follows:
       - HTML!HTML --> XML!Root
-        - "\<name\>" --> XML!Root.name
+        - "html" --> XML!Root.name
 		- HTML!HTML.head --> XML!Root.children
 		- HTML!HTML.body --> XML!Root.children
       - HTML!HTMLElement --> XML!Element
@@ -44,9 +44,19 @@
 		- "th" --> XML!Element.name
   - Chain **Ch2**
     - Transformation [TABLE2HTML v1.6](Table2HTML2XML/v1.6/Table2HTML.atl): _TABLE2HTML_ maps the following metaclasses and structural features:
-      
-    - Transformation [HTML2XML v1.6](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): _PetriNet2PNML_ maps metaclasses and StructuralFeature as follows:
-       
+     - Table!Table --> HTML!TABLE
+		- Table!Table.rows --> HTML!trs 
+     - Table!Row --> HTML!TR
+        - Table!Row.cells --> HTML.TR.tds 
+     - Table!Cell --> HTML!TH
+		- Table!Cell.value --> HTML!TH.value 
+     - Table!Cell --> HTML!TD 
+		- Table!Cell.value --> HTML!TD.value 
+		- "<left|center|rigth>" --> HTML!TD.align
+    - Transformation [HTML2XML v1.6](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): _HTML2XML_ maps metaclasses and StructuralFeature as follows:
+      - HTML!HTML --> XML!Root
+        - "html" --> XML!Root.name
+	       
 
 ## Input Model
 
