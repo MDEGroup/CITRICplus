@@ -1,5 +1,4 @@
 # Table2XML
-The Table2TabularHTML project is used to extracts an HTML file from a Table model.
 
 ## Chains description
  - Chain **Ch1**
@@ -60,7 +59,7 @@ The Table2TabularHTML project is used to extracts an HTML file from a Table mode
 
 The given input model ([Table2HTML.xmi](../tool/case_study/Table2HTML2XML/Table2HTML.xmi)) 
 
-For sake of this example we have assigned to the  metaclasses a ```weight = ```, while the structural feature  has a ```weight = 1```.
+For sake of this example we have assigned to the  Table!Table, Table!Row, HTML!HTML, HTML!HTMLElement, HTML!HEAD, HTML!HEADElement, HTML!Link, HTML!TITLE, HTML!BODYElement, HTML!TR, HTML!TD, HTML!TH, HTML!FORM, HTML!INPUT, HTML!TEXTAREA, HTML!SELECT, HTML!OPTION, HTML!ListElement, HTML!DL, HTML!DT, HTML!DD, HTML!APPLET, HTML!PARAM, HTML!OBJECT, HTML!FRAMESET, HTML!FRAME, HTML!NOFRAME, HTML!IFRAME, XML!Attribute, XML!Text, XML!Element, XML!Root metaclasses a ```weight = 1```, while Table!Cell has ```weight = 2```, HTML!BODY has ```weight = 4```, HTML!TABLE has ```weight = 5```.
 
 ## Chaining results
 
