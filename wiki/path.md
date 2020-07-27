@@ -1,0 +1,2 @@
+# PathExp2XML
+The path expression to Petri nets example describes a transformation from a path expression to a Petri net. This document provides an overview of the whole transformation sequence that enables to produce an XML Petri net representation (in the PNML format) from a textual definition of a path expression. Its also describes the reverse transformation sequence that enables to build a textual path expression representation from a XML definition of a Petri net (in the PNML format).

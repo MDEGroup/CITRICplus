@@ -1,4 +1,5 @@
 # Grafcet2PNML
+This transformation example describes bridges between Grafcet, Petri net, PNML, and XML. This example provides an overview of the whole transformation sequence that enables to produce an XML Petri net representation (in the PNML format) from a textual definition of a grafcet. It also describes the reverse transformation sequence that enables to build a textual grafcet representation from an XML definition of a PNML document.
 
 ## Chains description
  - Chain **Ch1**
