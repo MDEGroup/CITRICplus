@@ -12,7 +12,7 @@ Due to the complexity of the following transformation, we refer to the ATL codes
   - Chain **Ch2**
     - Transformation [Ant2Meven v1.01](../tool/case_study/Ant2Maven2XML/v1.01/Ant2Maven.atl): please, take a look at this file for mappings among metaclasses and structural features of Ant and Maven metamodels.
     
-    - Transformation [Maven2XML v1.01](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of Maven and XML metamodels.
+    - Transformation [Maven2XML v1.01](../tool/case_study/Ant2Maven2XML/v1.01/Maven2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of Maven and XML metamodels.
 
 
 ## Input Model
