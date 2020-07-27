@@ -1,7 +1,5 @@
 # Table2XML
 
-# Grafcet2PNML
-
 ## Chains description
  - Chain **Ch1**
    - Transformation [Table2HTML v1.0](../tool/case_study/Table2HTML2XML/v1.0/Table2HTML.atl): _Table2HTML_ maps the following metaclasses and structural features: 
