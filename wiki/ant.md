@@ -2,17 +2,17 @@
 Ant is an open source build tool (a tool dedicated to the assembly of the different pieces of a program) from the Apache Software Foundation. Ant is the most commonly used build tool for Java programs. Maven is another build tool created by the Apache Software Foundation. It is an extension of Ant because ant Tasks can be used in Maven. The difference from Ant is that a project can be reusable. This example describes a transformation from an Ant file to Maven files (project.xml and maven.xml).
 
 ## Chains description
-Due to the transformation complexy we demand to the ATL code directly to better understand mapping among Metaclasses and structural features.
+Due to the complexity of the following transformation, we refer to the ATL codes directly, to better understand mappings among metaclasses and structural features.
 
  - Chain **Ch1**
-   - Transformation [Table2HTML v1.0](../tool/case_study/Table2HTML2XML/v1.0/Table2HTML.atl): _Table2HTML_ maps the following metaclasses and structural features: 
+   - Transformation [Ant2HTML v1.0](../tool/case_study/Ant2Maven2XML/v1.0/Ant2Maven.atl): please, take a look at this file for mappings among metaclasses and structural feature of Ant and Maven metamodels.
 
-   - Transformation [HTML2XML v1.0](../tool/case_study/Table2HTML2XML/v1.0/HTML2XML.atl): _HTML2XML_ maps metaclasses and StructuralFeature as follows:
+   - Transformation [Maven2XML v1.0](../tool/case_study/Ant2Meven2XML/v1.0/Maven2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of Maven and XML metamodels.
 
   - Chain **Ch2**
-    - Transformation [TABLE2HTML v1.6](Table2HTML2XML/v1.6/Table2HTML.atl): _TABLE2HTML_ maps the following metaclasses and structural features:
+    - Transformation [Ant2Meven v1.01](../tool/case_study/Ant2Maven2XML/v1.01/Ant2Maven.atl): please, take a look at this file for mappings among metaclasses and structural features of Ant and Maven metamodels.
     
-    - Transformation [HTML2XML v1.6](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): _HTML2XML_ maps metaclasses and StructuralFeature as follows:
+    - Transformation [Maven2XML v1.6](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of Maven and XML metamodels.
 
 
 ## Input Model
