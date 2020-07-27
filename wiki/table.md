@@ -1,4 +1,5 @@
 # Table2XML
+The Table2TabularHTML project is used to extracts an HTML file from a Table model.
 
 ## Chains description
  - Chain **Ch1**
