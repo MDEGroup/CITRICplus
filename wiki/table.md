@@ -16,7 +16,7 @@
           - "<left|center|rigth>" --> HTML!TD.align
    - Transformation [HTML2XML v1.0](../tool/case_study/Table2HTML2XML/v1.0/HTML2XML.atl): _HTML2XML_ maps metaclasses and StructuralFeature as follows:
        - HTML!HTML --> XML!Root
-          - "<name>" --> XML!Root.name
+          - "html" --> XML!Root.name
           - HTML!HTML.head --> XML!Root.children
           - HTML!HTML.body --> XML!Root.children
        - HTML!HTMLElement --> XML!Element
