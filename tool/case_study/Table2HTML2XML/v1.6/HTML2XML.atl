@@ -1,0 +1,22 @@
+--@atlcompiler	atl2006
+--@name			HTML2XML
+--@version		2.0
+--@domains		HTML, Table
+--@authors		Eric Vepa (evepa <at> sodius.com) for SODIUS (www.sodius.com)
+--@date			2007/05/28
+--@description	HTML extractor for a subset of the HTML metamodel (table representation).
+
+module HTML2XML; -- Module Template
+create OUT : XML from IN : HTML;
+
+--@begin rule HTML
+rule HTML {
+	from
+		html : HTML!HTML
+	to
+		xml : XML!Root (
+			name <- 'html'
+		)
+}	
+--@end rule HTML
+
