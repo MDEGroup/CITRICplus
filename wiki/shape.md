@@ -2,15 +2,15 @@
 
 ## Chains description
    - Chain **Ch1**
-      - Transformation _[T1]() (ShapeMM1 --> ShapeMM2)_: T1 maps the ShapeMM1!Circle metaclass with the Shape2MM!BlueCircle. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
-      - Transformation _[T3]() (ShapeMM2 --> ShapeMM3)_: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
+      - Transformation _[T1](../tool/case_study/Shapes/t1_t3/ShapeMM12ShapeMM2_T1.atl) (ShapeMM1 --> ShapeMM2)_: T1 maps the ShapeMM1!Circle metaclass with the Shape2MM!BlueCircle. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
+      - Transformation _[T3](../tool/case_study/Shapes/t1_t3/ShapeMM22ShapeMM3_T3.atl) (ShapeMM2 --> ShapeMM3)_: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
    - Chain **Ch2**
-      - Transformation _[T2]() (ShapeMM1 --> ShapeMM2)_: T2 maps the ShapeMM1!Square metaclass with the Shape2MM!Diamond. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
-      - Transformation _[T3]() (ShapeMM2 --> ShapeMM3)_: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
+      - Transformation _[T2](../tool/case_study/Shapes/t2_t3/ShapeMM12ShapeMM2_T2.atl) (ShapeMM1 --> ShapeMM2)_: T2 maps the ShapeMM1!Square metaclass with the Shape2MM!Diamond. In addition, T1 also maps the StructuralFeature name of the ShapeMM1 with the same feature of ShapeMM2.
+      - Transformation _[T3](../tool/case_study/Shapes/t2_t3/ShapeMM22ShapeMM3_T3.atl) (ShapeMM2 --> ShapeMM3)_: T3 maps the ShapeMM2!BlueCircle with the ShapeMM3!Triangle and ShapeMM2!Diamond with ShapeMM3!Pentagon. In addition, T2 also maps the StructuralFeature name of the ShapeMM2 with the same feature of ShapeMM3.
 
 ## Input Model
 
-The given input model ([shape1.xmi]()) has two instances of the ShapeMM1!Circle, and two instances of ShapeMM1!Square. Both the instances have a StructuralFeature name.
+The given input model ([shape1.xmi](../tool/case_study/Shapes/Shape1.xmi)) has two instances of the ShapeMM1!Circle, and two instances of ShapeMM1!Square. Both the instances have a StructuralFeature name.
 For sake of this example we have assigned to the ShapeMM1!Circle metaclass a ```weight = 2```, while the ShapeMM1!Square has a ```weight = 1```. We have also assigned a ```weight = 1``` to the _name_ structural feature.
 Concerning the ShapeMM2, we have decided to assign a ```weight = 1``` to both the metaclasses as well as to the structural feature _name_.
 
