@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shapeMM1:Model
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:shapeMM1="http://shapeMM1">
+  <shapes xsi:type="shapeMM1:Circle"
+      name="Circle1"
+      content="Circle1"/>
+  <shapes xsi:type="shapeMM1:Circle"
+      name="Circle2"
+      content="Circle2"/>
+  <shapes xsi:type="shapeMM1:Square"
+      name="Square1"
+      content="Square1"/>
+  <shapes xsi:type="shapeMM1:Square"
+      name="Square2"
+      content="Square2"/>
+</shapeMM1:Model>

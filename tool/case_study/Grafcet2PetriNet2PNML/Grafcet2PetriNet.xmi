@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grafcet:Grafcet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Grafcet="Grafcet"
+    location="RootLocation"
+    name="MyGrafcet">
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s1"
+      action="AnAction"
+      outgoingConnections="//@connections.0"/>
+  <elements
+      xsi:type="Grafcet:Transition"
+      location="AnotherLocation"
+      name="t1"
+      condition="A condition"
+      incomingConnections="//@connections.0"/>
+  <connections
+      xsi:type="Grafcet:StepToTransition"
+      location="Alocationhere"
+      name="s1_t1"
+      from="//@elements.0"
+      to="//@elements.1"/>
+</Grafcet:Grafcet>

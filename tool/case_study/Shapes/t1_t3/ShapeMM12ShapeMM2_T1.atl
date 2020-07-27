@@ -1,0 +1,24 @@
+-- @nsURI ShapeMM1=http://shapeMM1
+-- @nsURI ShapeMM2=http://shapeMM2
+
+module ShapeMM12ShapeMM2;
+create OUT : ShapeMM2 from IN : ShapeMM1;
+
+rule Model2Model{
+	from s: ShapeMM1!Model
+	to t: ShapeMM2!Model(
+		shapes<-s.shapes
+	)
+}
+
+rule Circle2BlueCircle{
+	from s:ShapeMM1!Circle
+	to t: ShapeMM2!BlueCircle(
+		name<-s.name,	
+		content<-s.content
+	)
+}
+
+
+
+
