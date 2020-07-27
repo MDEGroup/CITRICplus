@@ -42,7 +42,7 @@ CITRIC+ is provided as a maven project, which can be run within ECLIPSE IDE.
   ``` git clone https://github.com/MDEGroup/CITRICplus && cd CITRICplus/tool```
   2. install all maven dependencies
   ```mvn install```
-  3. import the source code in a new ECLIPSE project
+  3. import the source code in ECLIPSE as an ```Existing maven project```
   4. use the provided launch files to execute different case studies as you prefer.
   
 CITRIC+ computes transformation chaining at runtime, without generetating middle models. For example, to compute the best chain between T1 --> T3, and T2 --> T3 CITRIC+ does not build the model conforming to the ShapeMM2 metamodel.
