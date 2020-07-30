@@ -103,8 +103,6 @@ This transformation example describes bridges between Grafcet, Petri net, PNML, 
 
 The given input model ([Grafcet2PetriNet.xmi](../tool/case_study/Grafcet2PetriNet2PNML/Grafcet2PetriNet.xmi)) 
 
-For sake of this example we have assigned to the Grafecet!Step, Grafecet!Transition, Grafecet!Connection, Grafecet!StepToTransition, Grafecet!TransitionToStep, PetriNet!Place, PetriNet!Transition, PetriNet!Arc, PetriNet!PlateToTransition, and PetriNet!TransitionToPlace metaclasses a ```weight = 1```, while the  structural feature Grafecet!Transition.condition has a ```weight = 1```.
-
 ## Chaining results
 
 | Projects  |  Available chains |  Selected |  IL |
