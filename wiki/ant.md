@@ -19,8 +19,6 @@ Due to the complexity of the following transformation, we refer to the ATL codes
 
 The given input model is the ([Ant2Maven.xmi](../tool/case_study/Ant2Maven2XML/Ant2Maven.xmi)).
 
-For sake of this example we have assigned to the  metaclasses a ```weight = 1```, while has ```weight = 5```.
-
 ## Chaining results
 
 | Projects  |  Available chains |  Selected |  IL |
