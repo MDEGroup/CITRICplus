@@ -1,4 +1,4 @@
-# CITRIC+
+# CITRIC+ ![](figures/22-lime-512.png
 
 The presented tool offered a first level of customization on the meta-metamodel level, specifying the weight of the information loss wrt. the concept of a lost instance or a lost value set in a structural feature. This means that for every instance lost in the transformation process, the tool will consider the same weight. 
 In this work we extend the definition of information loss with the notion of _semantic importance_ to be expressed on the concepts in metamodels involved in the transformation. Moreover the tool CITRIC presented in <cite>[[1]](#ref1)</cite> has been extended with a semantic reasoner component that will automatically select the solution with minor information loss, also considering the semantic importance. We enhanced CITRIC with a "+" entitling it CITRIC+.
