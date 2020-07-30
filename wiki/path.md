@@ -21,8 +21,6 @@ Due to the complexity of the following transformation, we refer to the ATL codes
 
 The given input model is the ([PathExp2PetriNet.xmi](../tool/case_study/PathExp2PetriNet2XML/PathExp2PetriNet.xmi)).
 
-For sake of this example we have assigned to the  metaclasses a ```weight = 1```, while has ```weight = 5```.
-
 ## Chaining results
 
 | Projects  |  Available chains |  Selected |  IL |
