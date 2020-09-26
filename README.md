@@ -1,10 +1,10 @@
 # HIDDENTOOL <img src="figures/22-lime-512.png" width=32 />
 
 The presented tool offered a first level of customization on the meta-metamodel level, specifying the weight of the information loss wrt. the concept of a lost instance or a lost value set in a structural feature. This means that for every instance lost in the transformation process, the tool will consider the same weight. 
-In this work we extend the definition of information loss with the notion of _semantic importance_ to be expressed on the concepts in metamodels involved in the transformation. Moreover the tool CITRIC presented in <cite>[[1]](#ref1)</cite> has been extended with a semantic reasoner component that will automatically select the solution with minor information loss, also considering the semantic importance. We enhanced CITRIC with a "+" entitling it CITRIC+.
+In this work we extend the definition of information loss with the notion of _semantic importance_ to be expressed on the concepts in metamodels involved in the transformation. Moreover the tool HIDDENTOOL presented in <cite>[[1]](#ref1)</cite> has been extended with a semantic reasoner component that will automatically select the solution with minor information loss, also considering the semantic importance. We enhanced HIDDENTOOL with a "+" entitling it HIDDENTOOL+.
 
 In this section we will describe the approach implemented by the tool for selecting optimal transformation chains based on information loss and semantic importance. 
-CITRIC works as an integration of the MDEForge <cite>[[2]](#ref2)</cite>, but it can work also as standalone plugin. Indeed to run the tool in a standalone environment, as we will demonstrate later, are only related to the remote connection with the repository, used to retrieve the required models and transformations. 
+HIDDENTOOL works as an integration of the MDEForge <cite>[[2]](#ref2)</cite>, but it can work also as standalone plugin. Indeed to run the tool in a standalone environment, as we will demonstrate later, are only related to the remote connection with the repository, used to retrieve the required models and transformations. 
 The Figure below shows the main architecture of the tool with the components and the different kinds of artefacts given as input or generated in output. The user request is composed of an input model and a required output metamodel. The input model is given to a dedicated component, which is able to retrieve the corresponding metamodel, that the modeler can edit in order to express the _semantic importance_ of the concepts and relationships. 
 
 ![Proposed Tool](figures/approach.png)
@@ -34,9 +34,9 @@ The result is then reported in terms of IL if the approach is able to identify t
 
 <em>Result of the execution on different projects.</em>
 
-### Getting started with CITRIC+
+### Getting started with HIDDENTOOL+
 
-CITRIC+ is provided as a maven project, which can be run within ECLIPSE IDE. 
+HIDDENTOOL+ is provided as a maven project, which can be run within ECLIPSE IDE. 
 
   1. clone this repository and then point to the tool folder 
   ``` git clone https://github.com/MDEGroup/CITRICplus && cd CITRICplus/tool```
@@ -45,7 +45,7 @@ CITRIC+ is provided as a maven project, which can be run within ECLIPSE IDE.
   3. import the source code in ECLIPSE as an ```Existing maven project```
   4. use the provided launch files to execute different case studies as you prefer.
   
-CITRIC+ computes transformation chaining at runtime, without generetating middle models. For example, to compute the best chain between T1 --> T3, and T2 --> T3 CITRIC+ does not build the model conforming to the ShapeMM2 metamodel.
+HIDDENTOOL+ computes transformation chaining at runtime, without generetating middle models. For example, to compute the best chain between T1 --> T3, and T2 --> T3 HIDDENTOOL+ does not build the model conforming to the ShapeMM2 metamodel.
 Result of our case studies are listed in [Table 1](#table1).
 
 ### References
