@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pref:PreferenceModel
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:pref="http://cs.gssi.it/preferencemodel"
+    xsi:schemaLocation="http://cs.gssi.it/preferencemodel ../../../HiddenToolDSL/model/PreferenceMM.ecore"
+    author="Rob">
+  <prefs xsi:type="pref:Importance">
+    <elements
+        xsi:type="pref:MCImportance"/>
+  </prefs>
+</pref:PreferenceModel>

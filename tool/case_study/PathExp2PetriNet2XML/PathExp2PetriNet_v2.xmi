@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ASCII"?>
+<PathExp:PathExp
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:PathExp="PathExp"
+    name="">
+  <states incoming="//@transitions.2"/>
+  <states outgoing="//@transitions.0"/>
+  <states incoming="//@transitions.3"
+      outgoing="//@transitions.1"/>
+  <states incoming="//@transitions.1"
+      outgoing="//@transitions.3"/>
+  <states incoming="//@transitions.0"
+      outgoing="//@transitions.2"/>
+  <transitions
+      name="f"
+      source="//@states.1"
+      target="//@states.4"/>
+  <transitions
+      name="s"
+      source="//@states.2"
+      target="//@states.3"/>
+  <transitions
+      name="k"
+      source="//@states.4"
+      target="//@states.0"/>
+  <transitions
+      name="p"
+      source="//@states.3"
+      target="//@states.2"/>
+</PathExp:PathExp>

@@ -63,7 +63,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Target">
     <eAnnotations source="http://class/importance">
-      <details key="weight" value="1"/>
+      <details key="weight" value="5"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" ordered="false" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

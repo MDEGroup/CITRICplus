@@ -11,14 +11,14 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Row">
       <eAnnotations source="http://class/importance">
-        <details key="weight" value="1"/>
+        <details key="weight" value="10"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="cells" lowerBound="1"
           upperBound="-1" eType="#/0/Cell" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Cell">
       <eAnnotations source="http://class/importance">
-        <details key="weight" value="2"/>
+        <details key="weight" value="1"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" ordered="false"
           unique="false" lowerBound="1" eType="#/1/String"/>

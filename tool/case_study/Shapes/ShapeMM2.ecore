@@ -18,7 +18,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BlueCircle" eSuperTypes="#//Shape">
     <eAnnotations source="http://class/importance">
-      <details key="weight" value="2"/>
+      <details key="weight" value="5"/>
     </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

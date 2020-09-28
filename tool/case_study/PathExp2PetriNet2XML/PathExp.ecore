@@ -20,7 +20,7 @@
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="State">
       <eAnnotations source="http://class/importance">
-        <details key="weight" value="1"/>
+        <details key="weight" value="5"/>
       </eAnnotations>
       <eStructuralFeatures xsi:type="ecore:EReference" name="incoming" ordered="false"
           upperBound="-1" eType="#/0/Transition" eOpposite="#/0/Transition/target"/>

@@ -1,0 +1,28 @@
+-- @nsURI ShapeMM2=http://shapeMM2
+-- @nsURI ShapeMM3=http://shapeMM3
+
+module ShapeMM22ShapeMM3;
+create OUT : ShapeMM3 from IN : ShapeMM2;
+
+rule Model2Model{
+	from s: ShapeMM2!Model
+	to t: ShapeMM3!Model(
+		shapes<-s.shapes
+	)
+}
+
+rule Diamond2Pentagon{
+	from s:ShapeMM2!Diamond
+	to t: ShapeMM3!Pentagon(
+		name<-s.name	
+	)
+}
+
+rule BlueCircle2Triangle{
+	from s:ShapeMM2!BlueCircle
+	to t: ShapeMM3!Triangle(
+		name<-s.name	
+	)
+}
+
+

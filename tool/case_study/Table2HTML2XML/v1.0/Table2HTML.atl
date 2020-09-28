@@ -68,17 +68,7 @@ lazy rule Row2TRwithTH {
 }
 --@end lazy rule Row2TRwithTH
 
---@begin lazy rule Cell2TH
-lazy rule Cell2TH {
-	from
-		cell : Table!Cell
-	to
-		th : HTML!TH (
-			value <- cell.value()
-		)
-}
---@end lazy rule Cell2TH
-
+--@@@@@@@@@@@@@@SENZA QUESTA viene IL = 7.33
 --@begin lazy rule Row2TRwithTD
 lazy rule Row2TRwithTD {
 	from
@@ -92,25 +82,3 @@ lazy rule Row2TRwithTD {
 }
 --@end lazy rule Row2TRwithTD
 
---@begin lazy rule Cell2TD
-lazy rule Cell2TD {
-	from
-		cell : Table!Cell
-	to
-		td : HTML!TD (
-			value <- cell.value()
-		)
-}
---@end lazy rule Cell2TD
-
---@begin lazy rule Cell2TDRightAlign
-lazy rule Cell2TDRightAlign {
-	from
-		cell : Table!Cell
-	to
-		td : HTML!TD (
-			value <- cell.value(),
-			align <- 'right'
-		)
-}
---@end lazy rule Cell2TDRightAlign

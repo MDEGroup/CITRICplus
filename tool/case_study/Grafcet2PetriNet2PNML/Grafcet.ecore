@@ -67,7 +67,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TransitionToStep" eSuperTypes="#//Connection">
     <eAnnotations source="http://class/importance">
-      <details key="weight" value="1"/>
+      <details key="weight" value="7"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="from" ordered="false" lowerBound="1"
         eType="#//Transition" eOpposite="#//Transition/outgoingConnections"/>

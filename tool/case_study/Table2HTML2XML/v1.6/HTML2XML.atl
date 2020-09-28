@@ -15,8 +15,131 @@ rule HTML {
 		html : HTML!HTML
 	to
 		xml : XML!Root (
-			name <- 'html'
+			name <- 'html',
+			children <- html.head,
+			children <- html.body
 		)
 }	
 --@end rule HTML
 
+--@begin rule HTMLElement
+rule HTMLElement {
+	from
+		html : HTML!HTMLElement
+	to
+		xml : XML!Element (
+			children <-  html.children
+		)
+}	
+--@end rule HTMLElement
+
+--@begin rule HEAD
+rule HEAD extends HTMLElement {
+	from
+		html : HTML!HEAD
+	to
+		xml : XML!Element (
+			name <- 'head',
+			children <- html.headElements
+		)
+}	
+--@end rule HEAD
+
+--@begin abstract rule HEADElement
+abstract rule HEADElement extends HTMLElement {
+	from
+		html : HTML!HEADElement
+	to
+		xml : XML!Element
+}	
+--@end abstract rule HEADElement
+
+--@begin rule TITLE
+rule TITLE extends HEADElement {
+	from
+		html : HTML!TITLE
+	to
+		xml : XML!Element (
+			name <- 'title',
+			children <- thisModule.Text(html.value)
+		)
+}	
+--@end rule TITLE
+
+--@begin rule BODY
+rule BODY extends HTMLElement {
+	from
+		html : HTML!BODY
+	to
+		xml : XML!Element (
+			name <- 'body',
+			children <- html.bodyElements
+		)
+}	
+--@end rule BODY
+
+--@begin abstract rule BODYElement
+abstract rule BODYElement extends HTMLElement {
+	from
+		html : HTML!BODYElement
+	to
+		xml : XML!Element
+}	
+--@end abstract rule BODYElement
+
+--@begin abstract rule TABLEElement
+abstract rule TABLEElement extends BODYElement {
+	from
+		html : HTML!TABLEElement
+	to
+		xml : XML!Element
+}	
+--@end abstract rule TABLEElement
+
+--@begin rule TABLE
+rule TABLE extends TABLEElement {
+	from
+		html : HTML!TABLE
+	to
+		xml : XML!Element (
+			name <- 'table',
+			children <- thisModule.Attribute('border',
+				if not html.border.oclIsUndefined()
+					then html.border
+					else '0'
+				endif),
+			children <- html.trs
+		)
+}	
+--@end rule TABLE
+
+
+
+--@begin called rule Attribute
+rule Attribute(attrName : String, attrValue : String) {
+	to
+		attr : XML!Attribute (
+			name <- attrName,
+			value <- attrValue
+		)
+	do {
+		attr;
+	}
+}	
+--@end called rule Attribute
+
+--@begin called rule Text
+rule Text(value : String) {
+	to
+		text : XML!Text (
+			value <-
+				if not value.oclIsUndefined()
+					then value
+					else ''
+				endif
+		)
+	do {
+		text;
+	}
+}	
+--@end called rule Text

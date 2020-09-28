@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Grafcet:Grafcet
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:Grafcet="Grafcet"
+    location="RootLocation"
+    name="MyGrafcet">
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s1"
+      action="AnAction"
+      incomingConnections="//@connections.1 //@connections.2"
+      outgoingConnections="//@connections.0"/>
+  <elements
+      xsi:type="Grafcet:Transition"
+      location="AnotherLocation"
+      name="t1"
+      condition="A condition"
+      incomingConnections="//@connections.0"
+      outgoingConnections="//@connections.1 //@connections.2 //@connections.3 //@connections.4"/>
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s2"
+      action="AnAction"/>
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s2"
+      action="AnAction"/>
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s2"
+      action="AnAction"/>
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s2"
+      action="AnAction"
+      incomingConnections="//@connections.3 //@connections.4"/>
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s2"
+      action="AnAction"/>
+  <elements
+      xsi:type="Grafcet:Step"
+      location="A Location"
+      name="s2"
+      action="AnAction"/>
+  <connections
+      xsi:type="Grafcet:StepToTransition"
+      location="Alocationhere"
+      name="s1_t1"
+      from="//@elements.0"
+      to="//@elements.1"/>
+  <connections
+      xsi:type="Grafcet:TransitionToStep"
+      location="asd"
+      name="asda"
+      from="//@elements.1"
+      to="//@elements.0"/>
+  <connections
+      xsi:type="Grafcet:TransitionToStep"
+      location="asd"
+      name="asda"
+      from="//@elements.1"
+      to="//@elements.0"/>
+  <connections
+      xsi:type="Grafcet:TransitionToStep"
+      location="asd"
+      name="asda"
+      from="//@elements.1"
+      to="//@elements.5"/>
+  <connections
+      xsi:type="Grafcet:TransitionToStep"
+      location="asd"
+      name="asda"
+      from="//@elements.1"
+      to="//@elements.5"/>
+</Grafcet:Grafcet>
