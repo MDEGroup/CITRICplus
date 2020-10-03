@@ -1,112 +1,41 @@
-# Grafcet2PNML
-This transformation example describes bridges between Grafcet, Petri net, PNML, and XML. This example provides an overview of the whole transformation sequence that enables to produce an XML Petri net representation (in the PNML format) from a textual definition of a grafcet. It also describes the reverse transformation sequence that enables to build a textual grafcet representation from an XML definition of a PNML document.
+# Grafcet2PetriNet2PNML
 
-## Chains description
- - Chain **Ch1**
-   - Transformation [Grafcet2PetriNet v1.0](../tool/case_study/Grafcet2PetriNet2PNML/v1.0/Grafcet2PetriNet.atl): _Grafcet2PetriNet_ maps the following metaclasses and structural features:
-     - Grafecet!Grafecet --> PetriNet!PetriNet
-       - Grafcet!Grafecet.location --> PetriNet!PetriNet.location
-       - Grafcet!Grafecet.name --> PetriNet!PetriNet.name
-       - Grafcet!Grafecet.elements --> PetriNet!PetriNet.elements
-       - Grafcet!Grafecet.connections --> PetriNet!PetriNet.arcs
-     - Grafcet!Step --> PetriNet!Place
-       - Grafcet!Step.location --> PetriNet!Place.location
-       - Grafcet!Step.name --> PetriNet!Place.name
-       - Grafcet!Step.grafcet --> PetriNet!Place.net
-       - Grafcet!Step.incomingConnections --> PetriNet!Place.incomingConnections
-       - Grafcet!Step.outgoingConnections --> PetriNet!Place.outgoingConnections
-     - Grafcet!Transition --> PetriNet!Transition
-       - Grafcet!Transition.location --> PetriNet!Transition.location
-       - Grafcet!Transition.name --> PetriNet!Transition.name
-       - Grafcet!Transition.grafcetPetriNet!Transition.net
-       - Grafcet!Transition.incomingConnections --> PetriNet!Transition.incomingArc
-       - Grafcet!Transition.outgoingConnections --> PetriNet!Transition.outgoingArc
-     - Grafcet!StepToTransition --> PetriNet!PlaceToTransition
-       - Grafcet!StepToTransition.location --> PetriNet!Step.location
-       - Grafcet!StepToTransition.name --> PetriNet!Step.name
-       - Grafcet!StepToTransition.grafcet --> PetriNet!Step.net
-       - Grafcet!StepToTransition."from" --> PetriNet!Step."from" 
-       - Grafcet!StepToTransition."to" --> PetriNet!Step."to"
-     - Grafcet!TransitionToStep --> PetriNet!TransitionToPlace
-       - Grafcet!TransitionToStep.location --> PetriNet!Step.location
-       - Grafcet!TransitionToStep.name --> PetriNet!Step.name
-       - Grafcet!TransitionToStep.grafcet --> PetriNet!Step.net
-       - Grafcet!TransitionToStep."from" --> PetriNet!Step."from" 
-       - Grafcet!TransitionToStep."to" --> PetriNet!Step."to"
-   - Transformation [PetriNet2PNML v1.0](../tool/case_study/Grafcet2PetriNet2PNML/v1.0/PetriNet2PNML.atl): _Grafcet2PetriNet_ maps metaclasses and StructuralFeature as follows:
-     - PetriNet!PetriNet --> PNML!PNMLDocument
-       - PetriNet!PetriNet.location --> PNML!PNMLDocument.location
-       - PetriNet!PetriNet.uri --> PNML!PNMLDocument.xmlns
-       - PetriNet!PetriNet.net --> PNML!PNMLDocument.nets
-       - PetriNet!Place --> PNML!Place
-     - PetriNet!Place.name --> PNML!Place.name
-       - PetriNet!Place.name --> PNML!Place.id
-       - PetriNet!Place.location --> PNML!Place.location
-     - PetriNet!Transition --> PNML!Transition
-       - PetriNet!Transition.name --> PNML!Transition.name
-       - PetriNet!Transition.name --> PNML!Transition.id
-       - PetriNet!Transition.location --> PNML!Transition.location
-     - PetriNet!Arc --> PNML!Arc
-       - PetriNet!Arc.name <- PNML!Arc.name
-       - PetriNet!Arc.location --> PNML!Arc.location
-       - PetriNet!Arc.name --> PNML!Arc.id
-       - PetriNet!Arc."from" --> PNML!Arc.source
-       - PetriNet!Arc."to" --> PNML!Arc.target
-  - Chain **Ch2**
-    - Transformation [Grafcet2PetriNet v1.87](../tool/case_study/Grafcet2PetriNet2PNML/v1.87/Grafcet2PetriNet.atl): _Grafcet2PetriNet_ maps the following metaclasses and structural features:
-      - Grafecet!Grafecet --> PetriNet!PetriNet
-        - Grafcet!Grafecet.location --> PetriNet!PetriNet.location
-        - Grafcet!Grafecet.name --> PetriNet!PetriNet.name
-        - Grafcet!Grafecet.elements --> PetriNet!PetriNet.elements
-        - Grafcet!Grafecet.connections --> PetriNet!PetriNet.arcs
-      - Grafcet!Step --> PetriNet!Place
-        - Grafcet!Step.location --> PetriNet!Place.location
-        - Grafcet!Step.name --> PetriNet!Place.name
-        - Grafcet!Step.grafcet --> PetriNet!Place.net
-        - Grafcet!Step.incomingConnections --> PetriNet!Place.incomingConnections
-        - Grafcet!Step.outgoingConnections --> PetriNet!Place.outgoingConnections
-      - Grafcet!Transition --> PetriNet!Transition
-        - Grafcet!Transition.location --> PetriNet!Transition.location
-        - Grafcet!Transition.name --> PetriNet!Transition.name
-        - Grafcet!Transition.grafcetPetriNet!Transition.net
-        - Grafcet!Transition.incomingConnections --> PetriNet!Transition.incomingArc
-        - Grafcet!Transition.outgoingConnections --> PetriNet!Transition.outgoingArc
-      - Grafcet!StepToTransition --> PetriNet!PlaceToTransition
-        - Grafcet!StepToTransition.location --> PetriNet!Step.location
-        - Grafcet!StepToTransition.name --> PetriNet!Step.name
-        - Grafcet!StepToTransition.grafcet --> PetriNet!Step.net
-        - Grafcet!StepToTransition."from" --> PetriNet!Step."from" 
-        - Grafcet!StepToTransition."to" --> PetriNet!Step."to"
-      - Grafcet!TransitionToStep --> PetriNet!TransitionToPlace
-        - Grafcet!TransitionToStep.location --> PetriNet!Step.location
-        - Grafcet!TransitionToStep.name --> PetriNet!Step.name
-        - Grafcet!TransitionToStep.grafcet --> PetriNet!Step.net
-        - Grafcet!TransitionToStep."from" --> PetriNet!Step."from" 
-        - Grafcet!TransitionToStep."to" --> PetriNet!Step."to"
-     - Transformation [PetriNet2PNML v1.87](../tool/case_study/Grafcet2PetriNet2PNML/v1.87/PetriNet2PNML.atl): _PetriNet2PNML_ maps metaclasses and StructuralFeature as follows:
-       - PetriNet!PetriNet --> PNML!PNMLDocument
-         - PetriNet!PetriNet.location --> PNML!PNMLDocument.location
-         - PetriNet!PetriNet.uri --> PNML!PNMLDocument.xmlns
-         - PetriNet!PetriNet.net --> PNML!PNMLDocument.nets
-       - PetriNet!Place --> PNML!Place
-         - PetriNet!Place.name --> PNML!Place.name
-         - PetriNet!Place.name --> PNML!Place.id
-         - PetriNet!Place.location --> PNML!Place.location
-       - PetriNet!Arc --> PNML!Arc
-         - PetriNet!Arc.name <- PNML!Arc.name
-         - PetriNet!Arc.location --> PNML!Arc.location
-         - PetriNet!Arc.name --> PNML!Arc.id
-         - PetriNet!Arc."from" --> PNML!Arc.source
-         - PetriNet!Arc."to" --> PNML!Arc.target
+In this project, there is the transformation __T1__ able to generate __PetriNet__ models from __Grafcet__ specifications.  The transformation __T2__ generates __PNML__ models from __PetriNet__ specifications. The transformation __T3__ is a mutation of T1, in which any rule referring to the __Transition__ metaclass in the __Grafcet__ metamodel was removed. Thus, given an input __Grafcet__ model,  two  chains are available, i.e.,  __T1 ; T2__ and __T3 ; T2__, each inducing a different information loss. For instance, by using the model m3 as input, increasing the semantic importance of __Transition__ (as done in __si<sub>4</sub>__) it can be seen that the best chain changes between the first run and the second one: in the first execution the best chain is __T1 ; T2__, whereas in the second one the best chain is __T3; T2__.
 
-## Input Model
+## DSL
 
-The given input model ([Grafcet2PetriNet.xmi](../tool/case_study/Grafcet2PetriNet2PNML/Grafcet2PetriNet.xmi)) 
+The available transformations in this project are:
 
-## Chaining results
+ - T1 Grafcet --> PetriNet 
+ - T2 PetriNet --> PNML
+ - T3 It is the transformation resulting from a mutation of T1 where all the rule concerning the __Transition__ element in the __Grafcet__ metamodel has been removed.
 
-| Projects  |  Available chains |  Selected |  IL |
-|  :---:       |:---:|:---:|:---:|
-| [Grafcet2PNML](../tool/case_study/Grafcet2PetriNet2PNML/) | Grafcet2PetriNet --> PetriNet2PNML v1.0 <hr/> Grafcet2PetriNet --> PetriNet2PNML v1.87 | Grafcet --> PetriNet --> PNML  | 1.23 <hr/> **0.63** |
+The available semantic importance models are:
 
-<em>Results of CITRIC+ over Ch1 and Ch2 chains.</em>
+ Metamodel importance __si<sub>4</sub>__
+
+```
+author "Dany";
+
+declare importance EClass = 1;
+declare importance EStructuralFeature = 1;
+
+use metamodel "Grafcet"{
+    declare importance for Transition = 4 {}
+}
+....
+```
+
+Metamodel importance __si<sub>5</sub>__
+```
+author "Dany";
+
+declare importance EClass = 1;
+declare importance EStructuralFeature = 1;
+
+use metamodel "Grafcet"{
+    declare importance for Transition = 2 {}
+    declare importance for Transition = 7 {}
+}
+....
+```
