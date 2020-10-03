@@ -1,28 +1,28 @@
-# PathExp2XML
+# PathExp2PetriNet2XML
 
-The path expression to Petri nets example describes a transformation from a path expression to a Petri net. This document provides an overview of the whole transformation sequence that enables to produce an XML Petri net representation (in the PNML format) from a textual definition of a path expression. Its also describes the reverse transformation sequence that enables to build a textual path expression representation from a XML definition of a Petri net (in the PNML format).
+This project includes a transformation that takes as input __PathExp__ models and produces __PetriNet__ ones. Then, two alternative transformations can be applied to generate    models conforming to the __XML__ metamodel. Thus, two possible chains are available to generate __XML__ models from input __PathExp__ ones, i.e., __T1 ; T2__ and __T1 ; T3__     A mutation of the __T1__ transformation has been performed to obtain __T4__, in which all the rules referring to the __State__ metaclass have been removed. Such mutation has     been intentionally done to stress the approach on cases when model elements of high importance are not propagated to the next steps of the chain. According to the specificati    on __si<sub>3</sub>__, the semantic importance of __State__ elements is much higher than the other ones. Thus, depending on the input model in each run, a different informati    on loss value is returned, depending on the number of __State__ instances that are available in the input models. For instance, by considering __m1__ as input model in the th    ird run, __T1 ; T2__ resulted to be better than the other chain, since the input model __m1__ contains 7 __State__ instances and 7 instances of the __Transition__ metaclass.     However, since si<sub>3</sub>__ declared the importance of __State__ to be greater than the __Transition__ metaclass, the selection process has preferred __T1 ; T2__. In fact    , the other possible chains include T4, which is a mutation that does not define any rules matching __State__ elements.
 
-## Chains description
+## DSL
 
-Due to the complexity of the following transformation, we refer to the ATL codes directly, to better understand mappings among metaclasses and structural features.
+The available transformations in this project are:
 
- - Chain **Ch1**
-   - Transformation [PathExp2PetriNet v0.6](../tool/case_study/PathExp2PetriNet2XML/v0.6/PathExp2PetriNet.atl): please, take a look at this file for mappings among metaclasses and structural feature of PathExp and PetriNet metamodels.
+ - T1  PathExp \rightarrow PetriNet
+ - T2  PetriNet \rightarrow XML 
+ - T3  PetriNet \rightarrow XML 
+ - T4  It is the transformation resulting from a mutation of T1 where all the rule concerning the __State__ element in the __PathExp__ metamodel has been removed.
 
-   - Transformation [PetriNet2XML v0.6](../tool/case_study/PathExp2PetriNet2XML/v0.6/PetriNet2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of PetriNet and XML metamodels.
+The available semantic importance model is: 
 
-  - Chain **Ch2**
-    - Transformation [PathExp2PetriNet v0.9](../tool/case_study/PathExp2PetriNet2XML/v0.9/PathExp2PetriNet.atl): please, take a look at this file for mappings among metaclasses and structural features of PathExp and PetriNet metamodels.
-    
-    - Transformation [PetriNet2XML v0.9](../tool/case_study/PathExp2PetriNet2XML/v0.9/PetriNet2XML.atl): please, take a look at this file for mappings among metaclasses and structural features of PetriNet and XML metamodels.
+Metamodel importance __si<sub>3</sub> __
 
+```
+author "Rob";
 
-## Input Model
+declare importance EClass = 1;
+declare importance EStructuralFeature = 1;
 
-The given input model is the ([PathExp2PetriNet.xmi](../tool/case_study/PathExp2PetriNet2XML/PathExp2PetriNet.xmi)).
-
-## Chaining results
-
-| Projects  |  Available chains |  Selected |  IL |
-|  :---:       |:---:|:---:|:---:|
-| [PathExp2XML](wiki/path.md)     | PathExp2PetriNet -> PetriNet2XML v0.6 <hr/> PathExp2PetriNet -> PetriNet2XML v0.9 | PathExp2PetriNet -> PetriNet2XML v0.9  | 3.0 <hr/> **0**  |
+use metamodel "PathExp"{
+    declare importance for State = 5 {}
+}
+.....
+```
