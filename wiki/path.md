@@ -6,9 +6,9 @@ This project includes a transformation that takes as input __PathExp__ models an
 
 The available transformations in this project are:
 
- - T1  PathExp \rightarrow PetriNet
- - T2  PetriNet \rightarrow XML 
- - T3  PetriNet \rightarrow XML 
+ - T1  PathExp --> PetriNet
+ - T2  PetriNet --> XML 
+ - T3  PetriNet --> XML 
  - T4  It is the transformation resulting from a mutation of T1 where all the rule concerning the __State__ element in the __PathExp__ metamodel has been removed.
 
 The available semantic importance model is: 
