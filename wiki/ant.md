@@ -15,6 +15,8 @@ The available transformations in this project are:
 
 The available semantic importance models are:
 
+
+Metamodel importance __si<sub>6</sub>__
 ```
 author "Dave";
 
@@ -28,6 +30,7 @@ use metamodel "Ant"{
 ....
 ```
 
+Metamodel importance __si<sub>7</sub>__
 ```
 author "Dave";
 
