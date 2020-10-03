@@ -1,71 +1,58 @@
-# Table2XML
-The Table2TabularHTML project is used to extracts an HTML file from a Table model.
+# Table2HTML2XML
 
-## Chains description
- - Chain **Ch1**
-   - Transformation [Table2HTML v1.0](../tool/case_study/Table2HTML2XML/v1.0/Table2HTML.atl): _Table2HTML_ maps the following metaclasses and structural features: 
-       - Table!Table --> HTML!TABLE
-          - Table!Table.rows --> HTML!trs 
-       - Table!Row --> HTML!TR
-          - Table!Row.cells --> HTML.TR.tds 
-       - Table!Cell --> HTML!TH
-          - Table!Cell.value --> HTML!TH.value 
-       - Table!Cell --> HTML!TD 
-          - Table!Cell.value --> HTML!TD.value 
-          - "<left|center|rigth>" --> HTML!TD.align
-   - Transformation [HTML2XML v1.0](../tool/case_study/Table2HTML2XML/v1.0/HTML2XML.atl): _HTML2XML_ maps metaclasses and StructuralFeature as follows:
-       - HTML!HTML --> XML!Root
-          - "html" --> XML!Root.name
-          - HTML!HTML.head --> XML!Root.children
-          - HTML!HTML.body --> XML!Root.children
-       - HTML!HTMLElement --> XML!Element
-          - HTML!HTMLElement.children --> XML!Element.children 
-       - HTML!HEAD --> XML!Element
-          - "head" --> XML!Element.name
-          - HTML.HTMLHead.headElements --> XML!Element.children
-       - HTML!TITLE --> XML!Element
-          - 'title' --> XML!Element.name
-          - HTML!Title.value --> XML.Element.children 
-       - HTML!BODY --> XML!Element
-          - "body" --> XML!Element.name
-          - HTML!BODY.bodyElements --> children
-       - HTML!TABLE --> XML!Element
-          - "table" --> XML!Element.name
-          - <HTML!Table.border| 0 > --> XML!Element.children 
-          - HTML!Table.trs --> XML!Element.children
-       - HTML!TR --> XML!Element
-          - "tr" --> XML!Element.name
-          - HTML!TR.tds --> children
-       - HTML!TD --> XML!Element
-          - "td" --> XML!Element.name
-          - HTML!TD.value --> XML!Element.children
-       - HTML!TH --> XML!Element
-          - "th" --> XML!Element.name
-  - Chain **Ch2**
-    - Transformation [TABLE2HTML v1.6](Table2HTML2XML/v1.6/Table2HTML.atl): _TABLE2HTML_ maps the following metaclasses and structural features:
-       - Table!Table --> HTML!TABLE
-         - Table!Table.rows --> HTML!trs 
-       - Table!Row --> HTML!TR
-         - Table!Row.cells --> HTML.TR.tds 
-       - Table!Cell --> HTML!TH
-         - Table!Cell.value --> HTML!TH.value 
-       - Table!Cell --> HTML!TD 
-         - Table!Cell.value --> HTML!TD.value 
-         - "<left|center|rigth>" --> HTML!TD.align
-    - Transformation [HTML2XML v1.6](../tool/case_study/Table2HTML2XML/v1.6/HTML2XML.atl): _HTML2XML_ maps metaclasses and StructuralFeature as follows:
-      - HTML!HTML --> XML!Root
-        - "html" --> XML!Root.name  
+The project contains the transformation __T1__ able to generate models conforming to the __HTML__ metamodel from input __Table__ specifications. The transformation __T2__ can generate __XML__ models from __HTML__ ones. Additionally, the transformation __T3__ has been added by mutating __T1__ to remove rules concerning __Cell__ elements of the __Table__ metamodel, and to add rules related to the __Row__ elements of the same input metamodel. Thus, two different chains are available to generate __XML__ specifications from __Table__ models, i.e., __T1 ; T2__ and __T2 ; T3__. Depending on the model given as input for each run of the approach, a different IL value is returned, depending on the number of __Cell__ elements that are available in the input models. For instance, in the third run, by considering __m3__ as input model, which contains 111 instances of __Cell__, 22 instances of __Row__, and 2 instances of __Table__, the chain $T2 ; T3$ resulted to be better than the others, because in __si$_{10__$__, a less importance value to __Cell__ has been defined. On the other hand, __m1__ contains more instances of __Cell__ than those available in __m3__ (i.e., 444), hence the selection process has preferred $T2 ; T3$ as best chain to be selected.
 
-## Input Model
+# DSL
 
-The given input model ([Table2HTML.xmi](../tool/case_study/Table2HTML2XML/Table2HTML.xmi)) 
+The available transformations in this project are:
 
-For sake of this example we have assigned to the  Table!Table, Table!Row, HTML!HTML, HTML!HTMLElement, HTML!HEAD, HTML!HEADElement, HTML!Link, HTML!TITLE, HTML!BODYElement, HTML!TR, HTML!TD, HTML!TH, HTML!FORM, HTML!INPUT, HTML!TEXTAREA, HTML!SELECT, HTML!OPTION, HTML!ListElement, HTML!DL, HTML!DT, HTML!DD, HTML!APPLET, HTML!PARAM, HTML!OBJECT, HTML!FRAMESET, HTML!FRAME, HTML!NOFRAME, HTML!IFRAME, XML!Attribute, XML!Text, XML!Element, XML!Root metaclasses a ```weight = 1```, while Table!Cell has ```weight = 2```, HTML!BODY has ```weight = 4```, HTML!TABLE has ```weight = 5```.
+ - T1 Table -->  HTML 
+ - T2 HTML -->  XML
+ - T3 It is the transformation resulting from a mutation of T1 where all the rules concerning the \textit{Cell} element in the Table metamodel has been removed and a rule has been added that impacts on elements of type __Row__.
 
-## Chaining results
+The available semantic importance models are:
 
-| Projects  |  Available chains |  Selected |  IL |
-|  :---:       |:---:|:---:|:---:|
-| [Table2XML](wiki/table.md)    | Table2HTML --> HTML2XML v1.0 <hr/> Table2HTML --> HTML2XML v1.6  | Table2HTML --> HTML2XML v1.6  | 7.6 <hr/> **3.1**  |
 
-<em>Results of CITRIC+ over Ch1 and Ch2 chains.</em>
+Metamodel importance __si<sub>8</sub>__  
+
+```
+author "Gino";
+
+declare importance EClass = 1;
+declare importance EStructuralFeature = 1;
+
+use metamodel "Table"{
+     declare importance for Row = 3 {}
+     declare importance for Cell = 5 {}
+}
+....
+```
+
+Metamodel importance __si<sub>9</sub>__
+
+```
+author "Jack";
+
+declare importance EClass = 1;
+declare importance EStructuralFeature = 1;
+
+use metamodel "Table"{
+    declare importance for Row = 7 {}
+    declare importance for Cell = 3 {}
+}
+....
+```
+
+Metamodel importance __si<sub>10</sub>__
+
+```
+author "Jack";
+
+declare importance EClass = 1;
+declare importance EStructuralFeature = 1;
+
+use metamodel "Table"{
+    declare importance for Row = 10 {}
+}
+....
+```
