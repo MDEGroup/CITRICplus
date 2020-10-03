@@ -13,7 +13,7 @@ The available transformations in this project are:
 
 The available semantic importance model is: 
 
-Metamodel importance __si<sub>3</sub> __
+Metamodel importance __si<sub>3</sub>__
 
 ```
 author "Rob";
