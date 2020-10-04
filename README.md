@@ -46,9 +46,3 @@ HIDDENTOOL+ is provided as a maven project, which can be run within ECLIPSE IDE.
   
 HIDDENTOOL+ computes transformation chaining at runtime, without generetating middle models. For example, to compute the best chain between T1 --> T3, and T2 --> T3 HIDDENTOOL+ does not build the model conforming to the ShapeMM2 metamodel.
 Result of our case studies are listed in [Table 1](#table1).
-
-### References
-
-<a id="ref1"></a>[1] A tool for automatically selecting optimal model transformation chains. Basciani, Francesco and Di Ruscio, Davide and D'Emidio, Mattia and Frigioni, Daniele and Pierantonio, Alfonso and Iovino, Ludovico. Proceedings of the 21st ACM/IEEE International Conference on Model Driven Engineering Languages and Systems: Companion Proceedings. [url](https://doi.org/10.1145/3270112.3270123).
-
-<a id="ref2"></a>[2] MDEForge: an Extensible Web-Based Modeling Platform. Francesco Basciani, Juri Di Rocco, Davide Di Ruscio, Amleto Di Salle, Ludovico Iovino, Alfonso Pierantonio. Proceedings of the 2nd International Workshop on Model-Driven Engineering on and for the Cloud co-located with the 17th International Conference on Model Driven Engineering Languages and Systems. [url](http://ceur-ws.org/Vol-1242/paper10.pdf)
