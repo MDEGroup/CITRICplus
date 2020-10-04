@@ -32,17 +32,3 @@ The result is then reported in terms of IL if the approach is able to identify t
 | [PathExp2XML](wiki/path.md)     | PathExp2PetriNet -> PetriNet2XML v0.6 <hr/> PathExp2PetriNet -> PetriNet2XML v0.9 | PathExp2PetriNet -> PetriNet2XML v0.9  | 3.0 <hr/> **0**  |
 
 <em>Result of the execution on different projects.</em>
-
-### Getting started with HIDDENTOOL+
-
-HIDDENTOOL+ is provided as a maven project, which can be run within ECLIPSE IDE. 
-
-  1. clone this repository and then point to the tool folder 
-  ``` git clone https://github.com/MDEGroup/CITRICplus && cd CITRICplus/tool```
-  2. install all maven dependencies
-  ```mvn install```
-  3. import the source code in ECLIPSE as an ```Existing maven project```
-  4. use the provided launch files to execute different case studies as you prefer.
-  
-HIDDENTOOL+ computes transformation chaining at runtime, without generetating middle models. For example, to compute the best chain between T1 --> T3, and T2 --> T3 HIDDENTOOL+ does not build the model conforming to the ShapeMM2 metamodel.
-Result of our case studies are listed in [Table 1](#table1).
