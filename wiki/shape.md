@@ -56,6 +56,12 @@ use metamodel "ShapeMM2"{
 
 ## Chaining results
 
-| Projects  |  Available chains |  Selected |  IL |
-|  :---:       |:---:|:---:|:---:|
-| [Shapes](wiki/shape.md)       | T1 --> T3 <hr/> T2 --> T3  | T2 --> T3  | 1.73 <hr/> **1.07**  |
+|         Project         | Run |   Chain   | Importance Model |   IL   |       |       |
+|:-----------------------:|:---:|:---------:|:----------------:|:------:|:-----:|:-----:|
+|                         |     |           |                  |   m1   |   m2  |   m3  |
+|[Shapes](wiki/shape.md)         |  1  |  T1 ; T3  |        si1       |  1.73  |  1.73 |  1.73 |
+|                         |  1   |  T2 ; T3  |        si1       |  **1.07**  |  **1.07** |  **1.07** |
+|                         |  2  |  T4 ; T3  |        si1       |   **0**   |   **0**   |   **0**   |
+|                         |   2  |  T2 ; T3  |        si1       |  1.07  |  1.07 |  1.07 |
+|                         |  3  |  T4 ; T3  |        si2       |    **0**   |   **0**   |   **0**   |
+|                         |  3   |  T5 ; T6  |        si2       |  3.33  |  3.33 |  3.33 |
