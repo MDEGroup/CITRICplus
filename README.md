@@ -1,4 +1,4 @@
-# TOOLNAME+ <img src="figures/22-lime-512.png" width=32 />
+# CITRIC<sub>+</sub> <img src="figures/22-lime-512.png" width=32 />
 
 The presented tool offered a first level of customization on the meta-metamodel level, specifying the weight of the information loss w.r.t.. the concept of a lost instance or a lost value set in a structural feature. This means that for every instance lost in the transformation process, the tool will consider the same weight. This is a flat management of the key concepts defined in the corresponding metamodels, where all the metaclasses and relation-ships formalizing the application domain are treated in the same manner. In this work we extend the definition of information loss by introducing the notion of semantic importance, already discussed in literature, to be expressed for the elements of the metamodels involved in the transformation.
 
